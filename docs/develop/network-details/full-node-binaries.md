@@ -118,7 +118,7 @@ cd bor
 # Checkout to a proper version
 # For e.g: git checkout 0.3.0
 git checkout <TAG OR BRANCH>
-make bor-all
+make bor
 sudo ln -nfs ~/bor/build/bin/bor /usr/bin/bor
 sudo ln -nfs ~/bor/build/bin/bootnode /usr/bin/bootnode
 ```
@@ -252,7 +252,7 @@ Run the full Heimdall node with these commands on your Sentry Node:
 
 ```bash
 sudo service heimdalld start
-sudo service heimdalld-rest-server start
+sudo service heimdalld rest-server start
 ```
 
 Now, you need to make sure that **Heimdall is synced** completely, and then only start Bor. If you start Bor without Heimdall syncing completely, you will run into issues frequently.
@@ -264,7 +264,8 @@ Now, you need to make sure that **Heimdall is synced** completely, and then only
 Once Heimdall is synced, run the below command:
 
 ```bash
-sudo service bor start
+cd ~/node/bor
+bash start.sh
 ```
 
 ## Logs
