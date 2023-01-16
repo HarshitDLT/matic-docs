@@ -65,6 +65,8 @@ module.exports = {
         "develop/network-details/full-node-deployment",
         "develop/network-details/full-node-binaries",
         "develop/network-details/full-node-docker",
+        "develop/network-details/full-node",
+        "develop/network-details/snapshot-instructions-heimdall-bor",
         "develop/network-details/network-rpc-endpoints",
         {
           type: "category",
@@ -146,7 +148,8 @@ module.exports = {
             "develop/wallets/portis",
             "develop/wallets/torus",
             "develop/wallets/walletconnect",
-            "develop/wallets/slashauth"
+            "develop/wallets/slashauth",
+            "develop/wallets/plaid-wallet-onboard",
           ],
         }
       ],
@@ -457,7 +460,6 @@ module.exports = {
             },
             "develop/ethereum-polygon/pos/deposit-withdraw-event-pos",
             "develop/ethereum-polygon/pos/deployment",
-            "develop/ethereum-polygon/pos/mapping-assets",
             "develop/pos-using-metamask",
           ],
         },
@@ -476,9 +478,9 @@ module.exports = {
             "develop/plasma-using-metamask",
           ],
         },
+        "develop/l1-l2-communication/fx-portal",
         "develop/ethereum-polygon/mintable-assets",
         "develop/l1-l2-communication/state-transfer",
-        "develop/l1-l2-communication/fx-portal",
       ],
     },
     {
@@ -612,6 +614,7 @@ module.exports = {
             "maintain/validate/validator-node-system-requirements",
             "maintain/validate/run-validator-binaries",
             "maintain/validate/run-validator-ansible",
+            "maintain/validate/run-validator",
           ],
         },
         {
@@ -664,7 +667,6 @@ module.exports = {
       ],
     },
   ],
-
   integrate: [
     "integrate/quickstart",
     {
@@ -987,21 +989,9 @@ module.exports = {
 
   zkEVM: [
     "zkEVM/introduction",
-    "zkEVM/develop",
-    "zkEVM/overview",
+    "zkEVM/architecture",
     "zkEVM/proof-of-efficiency",
-    {
-      type: "category",
-      label: "zkNode",
-      link: {
-        type: "generated-index"
-      },
-      items:[
-        "zkEVM/zknode/overview",
-        "zkEVM/zknode/setup-local-node",
-        "zkEVM/zknode/setup-production-node"
-      ]
-    },
+    "zkEVM/zknode/zknode-overview",
     {
       type: "category",
       label: "zkProver",
@@ -1059,6 +1049,18 @@ module.exports = {
       ]
     },
     "zkEVM/lx-ly-bridge",
+    {
+      type: "category",
+      label: "Start Building",
+      link: {
+        type: "generated-index"
+      },
+      items:[
+        "zkEVM/develop",
+        "zkEVM/setup-local-node",
+        "zkEVM/setup-production-node",
+      ]
+    },
     {
       type: "category",
       label: "zk Assembly",
